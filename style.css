@@ -4,9 +4,9 @@
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -14,21 +14,25 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-content: center;
 
     font-family: "HankenGrotesk", sans-serif;
     font-size: 1.8rem;
 }
 
+.results {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto;
+}
+
 .result-container {
+    padding: 2.4rem 3.6rem 4.2rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    padding: 2.4rem 3.6rem 4.2rem;
 
     border-radius: 0 0 3.6rem 3.6rem;
 
@@ -52,13 +56,12 @@ body {
 .score-container {
     min-width: 16rem;
     min-height: 16rem;
+    margin-bottom: 2rem;
+    padding: 1.6rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin-bottom: 2rem;
-    padding: 1.6rem;
 
     border-radius: 50%;
 
@@ -89,3 +92,116 @@ body {
     color: hsl(0, 100%, 100%);
 }
 
+.summary-container {
+    margin-top: 2.8rem;
+    padding: 0 3.2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 500;
+
+    color: hsl(224, 30%, 27%);
+}
+
+.summary-container h2 {
+    font-weight: 800;
+    margin-bottom: 1.6rem;
+}
+
+.category-container {
+    margin-bottom: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    list-style: none;
+}
+
+.category-container li {
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* border: 1px solid black; */
+    border-radius: 1.6rem;
+}
+
+.summary-score {
+    font-weight: 800;
+}
+
+.category-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reaction-container {
+    background: hsla(0, 100%, 67%, 10%);
+
+    color: hsl(0, 100%, 67%);
+}
+
+.memory-container {
+    background: hsla(39, 100%, 56%, 10%);
+
+    color: hsl(39, 100%, 56%);
+}
+
+.verbal-container {
+    background: hsla(166, 100%, 37%, 10%);
+
+    color: hsl(166, 100%, 37%);
+}
+
+.visual-container {
+    background: hsla(234, 85%, 45%, 10%);
+
+    color: hsl(234, 85%, 45%);
+}
+
+.category-container li p {
+    color: hsla(224, 30%, 27%, 50%);
+}
+
+.category-container li p span {
+    color: hsl(224, 30%, 27%);
+}
+
+.continue-btn {
+    padding: 1.6rem;
+
+    border: none;
+    border-radius: 3.2rem;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    background: hsl(224, 30%, 27%);
+
+    color: hsl(0, 100%, 100%);
+}
+
+.continue-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.attribution { 
+    padding: 1.6rem;
+
+    font-size: 1.1rem; 
+    text-align: center; 
+
+    background: hsl(224, 30%, 27%);
+    color: hsl(0, 100%, 100%);
+}
+
+.attribution a { 
+    /* color: hsl(228, 45%, 44%);  */
+    /* color: hsl(0, 100%, 67%); */
+    color: hsl(166, 100%, 37%);
+}

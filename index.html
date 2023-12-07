@@ -10,15 +10,10 @@
   
   <title>Frontend Mentor | Results summary component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  <section>
+  <section class="results">
     <div class="result-container">
       <h1>Your Result</h1>
       <div class="score-container">
@@ -29,33 +24,45 @@
     </div>
     <div class="summary-container">
       <h2>Summary</h2>
-      <div>
-        <i><img src="./assets/images/icon-reaction.svg" alt=""></i>
-        <span class="reaction-test">Reaction</span>
-        <p><span class="summary-score">80</span> / 100</p>
-      </div>
-      <div>
-        <i><img src="./assets/images/icon-memory.svg" alt=""></i>
-        <span class="memory-test">Memory</span>
-        <p><span class="summary-score">92</span> / 100</p>
-      </div>
-      <div>
-        <i><img src="./assets/images/icon-verbal.svg" alt=""></i>
-        <span class="verbal-test">Verbal</span>
-        <p><span class="summary-score">61</span> / 100</p>
-      </div>
-      <div>
-        <i><img src="./assets/images/icon-visual.svg" alt=""></i>
-        <span class="visual-test">Visual</span>
-        <p><span class="summary-score">72</span> / 100</p>
-      </div>
-      <button>Continue</button>
+      <ul class="category-container">
+        <li class="reaction-container">
+          <div class="category-name">
+            <img src="./assets/images/icon-reaction.svg" alt="">
+            <span>Reaction</span>
+          </div>
+          <p><span class="summary-score">80</span> / 100</p>
+        </li>
+        <li  class="memory-container">
+          <div class="category-name">
+            <img src="./assets/images/icon-memory.svg" alt="">
+            <span>Memory</span>
+          </div>
+          <p><span class="summary-score">92</span> / 100</p>
+        </li>
+        <li class="verbal-container">
+          <div class="category-name">
+            <img src="./assets/images/icon-verbal.svg" alt="">
+            <span>Verbal</span>
+          </div>
+          <p><span class="summary-score">61</span> / 100</p>
+        </li>
+        <li class="visual-container">
+          <div class="category-name">
+            <img src="./assets/images/icon-visual.svg" alt="">
+            <span>Visual</span>
+          </div>
+          <p><span class="summary-score">72</span> / 100</p>
+        </li>
+      </ul>
+      <button class="continue-btn">Continue</button>
     </div>
   </section>
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/EvandeeMoS" target="_blank">@EvandeeMoS</a>.
+    </p>
   </div>
 </body>
 </html>
